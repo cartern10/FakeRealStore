@@ -1,6 +1,7 @@
 <?php
 //modify.php
 require_once('../settings.php');
+require_once('../theme/header.php');
 require_once('verify_if_admin.php');
 if(isset($_SESSION['ID'])){
 	$query=$connection->prepare('SELECT * FROM categories WHERE ID=?');
