@@ -3,7 +3,10 @@ require_once('../settings.php');
 require_once('../theme/header.php');
 require_once('verify_if_admin.php');
 
-
+if(count($_POST)>0){
+  $order_query=$connection->prepare('UPDATE user_order SET status=? WHERE ID=?');
+  $order_query->execute([$_POST['status'], $_POST['order_id']]);
+}
 
 $order_query=$connection->prepare('SELECT * FROM user_order');
 $order_query->execute();
@@ -35,7 +38,6 @@ echo'<table>';
   echo'</tr>';
 }
 echo'</table>';
-
 
 $order_query=$connection->prepare('SELECT * FROM user_order');
 $order_query->execute();
