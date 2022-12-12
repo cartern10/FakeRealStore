@@ -1,4 +1,5 @@
 # FakeRealStore
+To view more details on the website there is a FakeRealStore.pptx that includes descriptions and images of the website
 
 You will have need to prevouisly install xampp
 
